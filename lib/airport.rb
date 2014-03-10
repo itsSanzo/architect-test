@@ -1,4 +1,4 @@
-class Airport
+class Airport 
   
   DEFAULT_CAPACITY = 100
 
@@ -22,6 +22,11 @@ class Airport
 
   def full?
     plane_count == @capacity
+  end
+
+  def weather_control
+    weather_conditions = ["sunny", "sunny", "sunny", "stormy"]
+    weather_conditions.sample
   end
 
 end

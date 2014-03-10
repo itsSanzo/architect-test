@@ -31,5 +31,9 @@ describe Airport do
     full_airport(airport)
     expect(lambda { airport.add(plane) }).to raise_error(RuntimeError)
   end
+
+  it "should have a sunny weather" do
+    expect(airport.weather_control).to eq("sunny")
+  end
   
 end
