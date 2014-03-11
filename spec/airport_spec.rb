@@ -10,9 +10,11 @@ describe Airport do
   end
 
   it "should accept a plane" do
+    plane.flying
     expect(airport.plane_count).to eq(0)
     airport.add(plane)
     expect(airport.plane_count).to eq(1)
+    expect(plane.landed?).to eq(true)
   end
 
   it "should let a plane take off" do
