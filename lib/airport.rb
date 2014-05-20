@@ -11,12 +11,17 @@ class Airport
     @planes.count
   end
 
-  def accept(plane)
-    @planes << plane
-  end
-
   def full?
     plane_count == @capacity
+  end
+
+  def accept(plane, weather)
+    raise "Airport has no landing space" if full?
+    @planes << plane unless weather.stormy?
+  end
+
+  def take_off(plane, weather)
+    @planes.delete(plane) unless weather.stormy?
   end
 
 end
