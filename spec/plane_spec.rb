@@ -1,17 +1,10 @@
-require "plane.rb"
+require "plane"
 
-describe Plane do
+describe Plane do 
   
-  let(:plane) { Plane.new }
-
-  it "should be landed when initialized" do
-    expect(plane.landed?).to be_true
+  it "should be flying when initialized" do
+    plane = Plane.new
+    expect(plane).to be_flying
   end
-
-  it "should be flying after taking off" do
-    plane.flying
-    expect(plane.landed?).to be_false
-  end
-
 	
 end
