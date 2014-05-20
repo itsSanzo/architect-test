@@ -15,4 +15,7 @@ describe Airport do
     expect(airport).to be_full
   end
 
+  xit "should accept new planes when sunny" do
+  end
+
 end
